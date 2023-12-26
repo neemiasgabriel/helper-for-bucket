@@ -7,10 +7,10 @@ import static com.picpay.core.common.helper.Constants.SLASH;
 import static com.picpay.core.common.helper.Constants.TO_READ_FILE;  
 import static com.picpay.core.common.helper.Constants.UPLOAD_ERROR;  
 import static java.nio.charset.StandardCharsets.UTF_8;  
-  
-@Slf4j  
-@Service  
-@RequiredArgsConstructor  
+
+@Slf4j
+@Service
+@RequiredArgsConstructor
 public class MiniIoClientFileSystem implements BucketClient {  
   private final AmazonS3 ioClient;  
   private final MiniIoProperties properties;  
