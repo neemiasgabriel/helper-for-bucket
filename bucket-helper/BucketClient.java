@@ -2,12 +2,11 @@ public interface BucketClient {
   /**
    * Lê um arquivo dentro do bucket
    *
-   * @param filePath   caminho para acessar o arquivo, no bucket
-   * @param objectKey  nome do arquivo
+   * @param filePath  caminho para acessar o arquivo, no bucket
+   * @param objectKey nome do arquivo
    * @return Os bytes do arquivo pedido
    * @throws FileReadingException    Não foi possível ler o arquivo
    * @throws InternalServerException Falha interna do sistema
-   *
    */
   InputStream readFile(final String filePath, final String objectKey)
       throws FileReadingException, InternalServerException;
@@ -15,9 +14,8 @@ public interface BucketClient {
   /**
    * Deleta o arquivo especificado na pasta, dentro do bucket
    *
-   * @param srcFolder  Pasta raiz
-   * @param fileName   Nome do arquivo
-   *
+   * @param srcFolder Pasta raiz
+   * @param fileName  Nome do arquivo
    */
   void deleteFileFrom(final String srcFolder, final String fileName);
 
@@ -48,7 +46,7 @@ public interface BucketClient {
   /**
    * Lê todos os arquivos dentro do path especificado
    *
-   * @param filePath   Caminho para o arquivo
+   * @param filePath Caminho para o arquivo
    * @return Lista com os metadados dos arquivos lidos
    * @throws FileReadingException    Não foi possível ler o arquivo
    * @throws InternalServerException Falha interna do sistema
@@ -70,8 +68,8 @@ public interface BucketClient {
   /**
    * Sobe um arquivo para o bucket.
    *
-   * @param fileName   Nome do arquivo, dentro da aplicação, que irá para o bucket
-   * @param filePath   Caminho onde o arquivo será adicionado no bucket
+   * @param fileName Nome do arquivo, dentro da aplicação, que irá para o bucket
+   * @param filePath Caminho onde o arquivo será adicionado no bucket
    * @return boolean. True, se o arquivo foi enviado. False, caso contrário
    * @throws FileReadingException    Não foi possível ler o arquivo
    * @throws InternalServerException Falha interna do sistema
